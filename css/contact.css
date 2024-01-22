@@ -1,0 +1,117 @@
+.contact-con
+{
+    padding-block: 60px;
+}
+.content{
+    gap: 30px;
+}
+.content>div {
+    background: var(--color-primary);
+    box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border-radius: 4px;
+}
+.content .contact-info{
+    width: 340px;
+    padding:40px 35px 51px 35px;
+    gap: 32px;
+    flex-shrink: 0;
+}
+.contact-info>div {
+    gap: 24px;
+}
+.contact-info p{
+    font-size: 14px;
+    font-weight: 400;
+}
+.contact-info p a {
+    color: var(--color-text2);
+}
+.contact-info-header h3 {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.contact-info-devider {
+    background: var(--color-text2);
+    height: 1px;
+    width: 100%;
+}
+
+.err {
+    font-size: 13px;
+    color:var(--color-secondary3);
+    line-height: 28px;
+}
+/* contact form */
+.contact-form{
+    width: 100%;
+    gap: 32px;
+    padding: 40px 32px 40px 31px;
+}
+.contact-form .btn-contact{
+    display: block;
+    margin-left: auto;
+    background: var(--color-button2);
+    color: var(--color-text);
+    height: 56px;
+    width: 245px;
+    font-weight: 500;
+}
+.contact-form .field-1{
+    gap:16px;
+}
+.field-1 .field {
+    width: 100%;
+}
+.field-1 .field .inp,.field-2 .inp {
+    height: 50px;
+    width: 100%;
+    background: var(--color-secondary);
+    border-radius: 4px;
+    padding-inline: 16px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.field-2 .inp {
+    resize: none;
+    padding: 12px;
+    height: 207px;
+}
+
+@media (max-width: 1120px) {
+    .field-1 {
+        flex-direction: column ;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        padding-inline: 40px;
+    }
+    .content .contact-info{
+        width: 100%;
+        align-items: flex-start;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .contact-form .inp{
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 560px) {
+    .page-history{
+        padding-bottom: 30px;
+    }
+    .content{
+        padding-inline: 0;
+    }
+    .content .contact-info{
+        grid-template-columns: 100%;
+    }
+    .contact-form .btn-contact{
+        height: 48px;
+        width: 100%;
+    }
+}

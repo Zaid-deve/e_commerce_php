@@ -1,0 +1,237 @@
+.checkout-container {
+    padding-block: 60px;
+}
+
+.checkout-container .content {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.content>div {
+    flex-shrink: 0;
+}
+
+.content .checkout-form {
+    min-width: 320px;
+}
+
+.checkout-form h1 {
+    font-family: 'Inter', serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.checkout-form .form {
+    margin-top: 48px;
+    gap: 32px;
+}
+
+.form .field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.field input {
+    margin-top: 8px;
+    height: 50px;
+    width: 100%;
+    border-radius: 4px;
+    background: var(--color-secondary);
+    border: none;
+    outline: none;
+    padding-inline: 20px;
+}
+
+.checkout-form .remember-details-label {
+    margin-top: 24px;
+    display: inline-block;
+}
+
+.checkout-form .remember-details-label span {
+    font-size: 16px;
+    padding-left: 8px;
+    font-weight: 400;
+}
+
+.checkout-form input[type='checkbox'] {
+    border-radius: 4px;
+    accent-color: var(--color-secondary3);
+}
+
+/* item overview */
+
+.item-overview {
+    margin-top: 80px;
+}
+
+.item-overview-content {
+    gap: 32px;
+}
+
+.item-overview-content>div:not(.coupon-info) {
+    max-width: 425px;
+    width: 100%;
+}
+
+.item-preview {
+    align-items: center;
+}
+
+.item-preview b {
+    margin-left: auto;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.item-preview span {
+    padding-left: 24px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.item-preview img {
+    height: 54px;
+    width: 54px;
+    object-fit: contain;
+}
+
+.price-info {
+    gap: 16px;
+}
+
+.price-info>div {
+    justify-content: space-between;
+    padding-bottom: 16px;
+}
+
+.price-info>div * {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.price-info>div:not(:last-child) {
+    border-bottom: 1px solid var(--color-30-1);
+}
+
+.payment-info {
+    gap: 32px;
+}
+
+.payment-info>div {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment-info>div label span {
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 8px;
+    display: inline-block;
+}
+
+.payment-info>div label input[type='radio'] {
+    height: 16px;
+    width: 16px;
+    accent-color: var(--color-primary1);
+}
+
+.coupon-info {
+    width: 527px;
+}
+
+.coupon-info .field {
+    gap: 10px;
+    height: 56px;
+}
+
+.coupon-info .field input {
+    height: 100%;
+    margin-top: 0;
+}
+
+.coupon-info .field .btn {
+    height: 100%;
+    width: 211px;
+    background-color: var(--color-button2) !important;
+    color: var(--color-text);
+    font-size: 16px;
+    font-weight: 400;
+    flex-shrink: 0;
+}
+
+.btn-place-order {
+    padding: 16px 48px;
+    background: var(--color-button2) !important;
+    color: var(--color-text) !important;
+    margin-right: auto;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.err {
+    font-size: 14px;
+    color: var(--color-secondary3);
+    line-height: 28px;
+}
+
+@media (max-width: 1300px) {
+    .checkout-container .content{
+        justify-content: center;
+    }
+    .item-overview-content .coupon-info{
+        width: 100%;
+    }
+    .checkout-form h1 {
+        font-size: 28px;
+    }
+    .checkout-form .form {
+        margin-top: 28px;
+    }
+    .field label {
+        font-size: 14px;
+    }
+    .field input{
+        height: 46px;
+    }
+}
+
+@media (max-width: 768px) {
+    .checkout-form {
+        width: 100%;
+        min-width: none;
+    }
+
+    .item-overview {
+        width: 100%;
+    }
+
+    .item-overview-content{
+        width: 100%;
+    }
+    .item-overview-content>div {
+        max-width: none !important;
+        width: 100%;
+    }
+    /* .content .item-overview{
+        margin-top: 22px;
+    } */
+}
+
+@media (max-width: 620px) {
+    .coupon-info .field{
+        flex-direction: column;
+        align-items: flex-end;
+        height: auto;
+    }
+    .coupon-info .field :where(input,.btn) {
+        height: 44px !important;
+    }
+}

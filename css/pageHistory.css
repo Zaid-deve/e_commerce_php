@@ -1,0 +1,35 @@
+.page-history {
+    padding-bottom: 60px;
+}
+
+.page-history p{
+    flex-wrap: wrap;
+}
+.page-history p a {
+    text-decoration: none;
+    opacity: .5;
+    color: var(--color-text2);
+}
+
+.page-history p a.active {
+    opacity: 1;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .page-history {
+        padding-bottom: 45px;
+    }
+}
+
+@media (max-width: 500px) {
+    .page-history {
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    .page-history {
+        padding-bottom: 20px;
+    }
+}

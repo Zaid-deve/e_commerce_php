@@ -1,0 +1,50 @@
+.error404-con {
+    padding-block: 60px;
+}
+
+.error404-text {
+    text-align: center;
+}
+
+.error404-text h1 {
+    font-family: 'Inter', serif;
+    font-size: 110px;
+    font-weight: 500;
+}
+
+.error404-text p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 40px;
+}
+
+
+.error404-text .btn-back {
+    padding: 16px 48px;
+    background: var(--color-button2);
+    border-radius: 4px;
+    margin-top: 80px !important;
+    display: inline-block;
+}
+
+@media (max-width: 920px) {
+    .error404-text h1 {
+        font-size: 90px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .error404-text h1 {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 500px) {
+    .error404-text h1 {
+        font-size: 50px;
+    }
+    .error404-text p{
+        font-size: 14px;
+    }
+}

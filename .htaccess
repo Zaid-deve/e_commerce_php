@@ -1,0 +1,8 @@
+#removeExtention
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^.]+)$ $1.php [NC,L]
+
+
+#errorDocument
+ErrorDocument 404 /e_commerce_design/error404.php
