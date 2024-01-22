@@ -83,30 +83,30 @@ $bestselling_id = "";
             </div>
             <div class="container-content content-2 container-section continer-section-2">
                 <div class="content-2-list flex flex-v-center">
-                    <div class="content-2-list-item flex">
+                    <a class="content-2-list-item flex" href="#">
                         <img src="./images/cimgs/Category-CellPhone.png" alt="#">
                         <span>Phones</span>
-                    </div>
-                    <div class="content-2-list-item flex">
+                    </a>
+                    <a class="content-2-list-item flex" href="#">
                         <img src="./images/cimgs/Category-Computer.png" alt="#">
                         <span>Computers</span>
-                    </div>
-                    <div class="content-2-list-item flex">
+                    </a>
+                    <a class="content-2-list-item flex" href="#">
                         <img src="./images/cimgs/Category-SmartWatch.png" alt="#">
                         <span>SmartWatch</span>
-                    </div>
-                    <div class="content-2-list-item flex active">
+                    </a>
+                    <a class="content-2-list-item flex" href="#">
                         <img src="./images/cimgs/Category-Camera.png" alt="#">
                         <span>Cameras</span>
-                    </div>
-                    <div class="content-2-list-item flex">
+                    </a>
+                    <a class="content-2-list-item flex" href="#">
                         <img src="./images/cimgs/Category-Headphone.png" alt="#">
                         <span>Headphones</span>
-                    </div>
-                    <div class="content-2-list-item flex">
+                    </a>
+                    <a class="content-2-list-item flex" href="#">
                         <img src="./images/cimgs/Category-Gamepad.png" alt="#">
                         <span>Gampad</span>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div class="container-section-line"></div>
