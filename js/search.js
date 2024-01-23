@@ -3,7 +3,7 @@ const searchbar = document.querySelector(".header-search-inp"),
 searchbar.addEventListener('keypress', function (e) {
     if (this.value != "") {
         if (e.keyCode == 13) {
-            location.href = "localhost/e_commerce_design/includes/product/search.php?qry=" + this.value
+            location.href = "http://localhost/e_commerce_design/product/search.php?qry=" + this.value
             return;
         }
         reqSearch(this.value)
