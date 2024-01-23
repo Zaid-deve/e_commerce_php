@@ -1,7 +1,9 @@
 const uname = document.querySelector("#uname"),
     email = document.querySelector("#email"),
     pass = document.querySelector("#pass"),
-    signup_btn = document.querySelector(".btn-signup")
+    signup_btn = document.querySelector(".btn-signup"),
+    form_err = document.querySelector(".form-err"),
+    form_err_txt = form_err.querySelector(".err-txt");
 
 function check_data() {
     let form_valid = true;
@@ -48,8 +50,6 @@ signup_btn.addEventListener('click', function () {
 })
 
 const req_signup = async () => {
-    let isSuccess = false;
-
     // prepare data
 
     const data = new FormData()
@@ -65,14 +65,14 @@ const req_signup = async () => {
 
 
     if (response.ok) {
-        let response_data = response.text()
-        response_data.then((resp) => {
-            if (resp == 'success') {
-                isSuccess = true
-                location.replace('../account/index')
-            }
-        })
-    }
+        let response_data = await response.text()
+        if (response_data == 'success') {
+            location.replace('../account/index')
+            return;
+        }
+        form_err_txt.textContent = response_data;
+    } else form_err_txt.textContent = 'Something Went Wrong !';
 
-    if (!isSuccess) signup_btn.disabled = false
+    form_err.classList.add('show')
+    signup_btn.disabled = false
 }

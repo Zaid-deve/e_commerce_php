@@ -1,7 +1,6 @@
 <?php
 
 // validate signup
-
 if (isset($_POST)) {
 
     // get contents
@@ -27,7 +26,7 @@ if (isset($_POST)) {
         $fname = $lname = '';
         $fullname = explode(' ', $uname, 2);
         $fname = $fullname[0];
-        if(count($fullname) > 1) $lname = $fullname[1];
+        if (count($fullname) > 1) $lname = $fullname[1];
 
         // encode data
         $enc_email = base64_encode($email);

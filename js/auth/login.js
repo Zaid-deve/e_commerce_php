@@ -1,6 +1,9 @@
 const email = document.querySelector("#email"),
     pass = document.querySelector("#pass"),
-    login_btn = document.querySelector('.btn-login');
+    login_btn = document.querySelector('.btn-login'),
+    form_err = document.querySelector(".form-err"),
+    form_err_txt = form_err.querySelector(".err-txt");
+
 
 login_btn.addEventListener('click', function () {
     if (check_data()) {
@@ -13,8 +16,6 @@ login_btn.addEventListener('click', function () {
 
 
 const req_login = async () => {
-    let isSuccess = false;
-
     // prepare data
 
     const data = new FormData()
@@ -29,39 +30,33 @@ const req_login = async () => {
 
 
     if (response.ok) {
-        let response_data = response.text()
-        response_data.then((resp) => {
-            if (resp == 'success') {
-                isSuccess = true
-                location.replace('../account/index')
-            }
-        })
-    }
+        let response_data = await response.text()
+        if (response_data == 'success') {
+            location.replace('../account/index')
+            return;
+        }
+        form_err_txt.textContent = response_data;
+    } else form_err_txt.textContent = 'Something Went Wrong !';
 
-    if (!isSuccess) login_btn.disabled = false
+    form_err.classList.add('show')
+    login_btn.disabled = false
 }
 
 const check_data = () => {
     let form_valid = true
-
-    // validate email 
-    if (email.value == '') {
-        err(email.parentElement, 'please enter your email address')
-        form_valid = false
-    }
-    else if (!isEmail(email.value)) {
-        err(email.parentElement, 'please enter a valid email address')
-        form_valid = false
-    }
-    else err(email.parentElement, '')
-
-    // validate pass 
-    if (pass.value == '') {
-        form_valid = false
-        err(pass.parentElement, 'please enter your email password to continue')
-    }
-    else {
+    if(!isEmail(email.value)){
+        form_valid=false
+        err(email.parentElement,'Please enter a valid email addres !')
+    } else {
         err(email.parentElement, '')
     }
+
+    if(pass.value == ""){
+        form_valid=false
+        err(pass.parentElement,'Please enter your account password !')
+    } else {
+        err(pass.parentElement, '')
+    }
+
     return form_valid;
 }

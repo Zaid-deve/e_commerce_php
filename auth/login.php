@@ -1,14 +1,10 @@
 <?php
 
 session_start();
-
-// db connection
-require "../db/db_config.php";
-require "../db/db_conn.php";
-
 // user id
 if (isset($_SESSION['user_id']) and !empty($_SESSION['user_id'])) {
-    $uid = base64_encode($_SESSION['user_id']);
+    header("Location: ../account/index");
+    die();
 }
 
 ?>
@@ -50,6 +46,9 @@ if (isset($_SESSION['user_id']) and !empty($_SESSION['user_id'])) {
                 <div class="form-header grid">
                     <h1>Log in to Exclusive</h1>
                     <h5>Enter your details below</h5>
+                </div>
+                <div class="form-err">
+                   <p class="err-txt"></p>
                 </div>
                 <div class="form-fields grid">
                     <div class="form-field">

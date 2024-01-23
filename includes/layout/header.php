@@ -74,14 +74,14 @@ if (isset($_SESSION['user_id']) and !empty($_SESSION['user_id'])) {
                             <div class="user-menu" tabindex="-1">
                                 <ul class="user-menu-items grid">
                                     <li class="user-menu-item">
-                                        <a href="#" class="flex gap-4">
+                                        <a href="http://localhost/e_commerce_design/account/index" class="flex gap-4">
                                             <i class="ri-user-line"></i>
                                             <span>Manage My Account</span>
                                         </a>
                                     </li>
 
                                     <li class="user-menu-item">
-                                        <a href="#" class="flex gap-4">
+                                        <a href="http://localhost/e_commerce_design/account/orders.php" class="flex gap-4">
                                             <i class="ri-shopping-cart-line"></i>
                                             <span>My Order</span>
                                         </a>
@@ -102,7 +102,7 @@ if (isset($_SESSION['user_id']) and !empty($_SESSION['user_id'])) {
                                     </li>
 
                                     <li class="user-menu-item">
-                                        <a href="logout.php" class="flex gap-4">
+                                        <a href="http://localhost/e_commerce_design/logout.php" class="flex gap-4">
                                             <i class="ri-logout-box-line"></i>
                                             <span>Logout</span>
                                         </a>
