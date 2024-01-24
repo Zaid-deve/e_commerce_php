@@ -10,6 +10,7 @@
                     <input type="text" class="news-lister-inp" placeholder="Enter your email">
                     <button class="btn btn-news-lister-add"><i class="ri-send-plane-2-line"></i></button>
                 </div>
+                <div class="err" style="color: orangered;"></div>
             </div>
 
             <!-- footer section 2, contact section -->

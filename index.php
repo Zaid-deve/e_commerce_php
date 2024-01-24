@@ -260,6 +260,8 @@ $bestselling_id = "";
     <script src="js/product/add_to_fav.js"></script>
     <script src="js/product/add_to_cart.js"></script>
     <script src="js/product/sales.js"></script>
+    <script src="js/form-func.js"></script>
+    <script src="js/account/newslister.js"></script>
 
 
 </body>
